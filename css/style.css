@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-color: darkkhaki;
+    height: 100vh;
+    position: relative;
+    
+}
+.risultato{
+    position: absolute;
+    margin-top: 20px;
+    bottom: 10vh;
+    left: 40vw;
+  
+}
+.main {
+    position: absolute;
+    background-color: white;
+    width: 500px;    
+    top: 50%;
+    left: 50%;
+    padding: 15px 13px 20px 13px;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.2em 1.2em;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: space-between;
+    
+}
+#mosse{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#maingame{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 15px;
+    
+}
+.card-container{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+     
+}
+
+.flipped{
+    transform: rotateY(180deg);
+}
+
+/*.card-before,.card-after{
+    
+}*/
+.thefront{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid black;    
+    z-index: 0;  
+    transform-style: preserve-3d;
+}
+
+.theback{
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid black;
+    backface-visibility: hidden;
+    z-index: 1;
+    transform-style: preserve-3d;
+}
+
+#cardspace{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 80px 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px 80px;
+}
+.flipped.card-before{
+    transform: rotateY(180deg);
+}
+.flipped.card-after{
+    transform: rotateY(0deg);
+}
